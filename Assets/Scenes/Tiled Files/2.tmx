@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="128" tileheight="128" nextobjectid="1">
+ <tileset firstgid="1" name="spritesheet_ground" tilewidth="128" tileheight="128" tilecount="128" columns="8">
+  <image source="../../Graphics/Platformer Pack Redux (360 assets)/Spritesheets/spritesheet_ground.png" width="1024" height="2048"/>
+  <tile id="1">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polyline points="0,0 0,64 32,96 64,128 128,128 128,0 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polygon points="0,0 0,128 128,32 128,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="19">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polyline points="0,0 -1,43 128,128 128,0 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="24">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="128">
+     <polygon points="0,0 128,-128 128,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="32">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polygon points="0,0 0,128 128,128"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="40">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="42">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="48">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="127.667" height="74"/>
+   </objectgroup>
+  </tile>
+  <tile id="54">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polyline points="0,0 0,64 32,96 96,128 128,128 128,0 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="56">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="73.6667"/>
+   </objectgroup>
+  </tile>
+  <tile id="58">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="128">
+     <polygon points="0,0 128,-128 128,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="66">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polygon points="0,0 128,128 0,128"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="74">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="82">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="90">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="93">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="98">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="104">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polyline points="0,0 0,128 127.667,44.6667 127.667,10.3333 119.333,0.333333 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="109">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="128">
+     <polygon points="0,0 128,-128 128,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="112">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="3.33333">
+     <polyline points="0,0 -0.666667,41.6667 128.667,126 128,-3.33333 0,-3.33333 0.333333,-0.333333"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="117">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polygon points="0,0 0,128 128,128"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="122">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polygon points="0,0 0,128 96,96 128,64 128,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="129" source="C:/Users/dicen/Desktop/Tilesets/spritesheet_items.tsx"/>
+ <tileset firstgid="161" name="spritesheet_tiles" tilewidth="128" tileheight="128" tilecount="128" columns="8">
+  <image source="../../Graphics/Platformer Pack Redux (360 assets)/Spritesheets/spritesheet_tiles.png" width="1024" height="2048"/>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="96"/>
+    <object id="0" x="0" y="0" width="32"/>
+    <object id="0" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="33">
+   <animation>
+    <frame tileid="33" duration="150"/>
+    <frame tileid="25" duration="150"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer name="Background" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILhAaKBOBgJe+NQx8JINyfRFIz6Y3CBUX8MLjDqj8EF0P0xXP01VMFg9McaMvQMRn+QA0D+GC5+GQWkAwAssQKS
+  </data>
+ </layer>
+ <layer name="Foreground" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYiANWAOxNg7sTKJZ1AJMUEwsAPkhG4hVcOBiBtx+QfY/tf2Lzx8iDJjhjc8PyH7BFlfZDMT5l9r+oDUA+YWHSmbB/AELe2qZSw5gAeJqMvUOZHzgAsT65xAQP4HSuPyBLW8gYxBIJkBTWo4R8s9dIH4DZdMrPijJ19FAHIwHezPQN11Ru4xCBvTOH7Tyy0Dkc1r4ZbCUV7C6fg2ZeDD4A7mts4VMTAt/wMoXbyLUorfXBtIfpLgbnx/o7Q9y3U3ID7TyB3I7G9TuIjcPrmEgvt1MqT9gbRVc4UWu+TBMqK1PzfgAtVVuY/HDUPIHoTgfCv4AAGt2snk=
+  </data>
+ </layer>
+</map>

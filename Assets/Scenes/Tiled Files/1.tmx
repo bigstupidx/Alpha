@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="25" tilewidth="128" tileheight="128" nextobjectid="17">
+ <tileset firstgid="1" name="spritesheet_ground" tilewidth="128" tileheight="128" tilecount="128" columns="8">
+  <image source="../../Graphics/Platformer Pack Redux (360 assets)/Spritesheets/spritesheet_ground.png" width="1024" height="2048"/>
+  <tile id="1">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="8">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="9">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="19">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polyline points="0,0 -1,43 128,128 128,0 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="24">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="128">
+     <polygon points="0,0 128,-128 128,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="32">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polygon points="0,0 0,128 128,128"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="40">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="42">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="48">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="127.667" height="74"/>
+   </objectgroup>
+  </tile>
+  <tile id="54">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polyline points="0,0 0,64 32,96 96,128 128,128 128,0 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="56">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="73.6667"/>
+   </objectgroup>
+  </tile>
+  <tile id="58">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="128">
+     <polygon points="0,0 128,-128 128,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="66">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polygon points="0,0 128,128 0,128"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="93">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="104">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polyline points="0,0 0,128 127.667,44.6667 127.667,10.3333 119.333,0.333333 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="109">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="128">
+     <polygon points="0,0 128,-128 128,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="112">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="3.33333">
+     <polyline points="0,0 -0.666667,41.6667 128.667,126 128,-3.33333 0,-3.33333 0.333333,-0.333333"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="117">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polygon points="0,0 0,128 128,128"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="122">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polygon points="0,0 0,128 96,96 128,64 128,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="129" source="C:/Users/dicen/Desktop/Tilesets/spritesheet_items.tsx"/>
+ <tileset firstgid="161" name="spritesheet_tiles" tilewidth="128" tileheight="128" tilecount="128" columns="8">
+  <image source="../../Graphics/Platformer Pack Redux (360 assets)/Spritesheets/spritesheet_tiles.png" width="1024" height="2048"/>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0" width="96"/>
+    <object id="0" x="0" y="0" width="32"/>
+    <object id="0" x="0" y="0" width="128" height="64"/>
+   </objectgroup>
+  </tile>
+  <tile id="33">
+   <animation>
+    <frame tileid="33" duration="150"/>
+    <frame tileid="25" duration="150"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer name="Background" width="40" height="25" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzt0UEKABAABED+4MG+5uxTEkdHoczUnndrQwAA2KeO5BNdKZ5o+VuZuan/vPr6hW0AOzUR/QVa
+  </data>
+ </layer>
+ <layer name="Water" width="40" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztzrEJADAMBDHvP0bKTJkF3D0BgyW4/qoAAPY5TZPcpkn8Zfxl/GX8ZX7+PS6LJF8=
+  </data>
+ </layer>
+ <layer name="Ground" width="40" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztzjEKgDAQRFFJlyNYCnaeJKWH9J5auCAhYd0Mjs0M/CoseWn6f2nwjTX5sMmHTT5s8mGTD5t82L7wzVf50VG1BfJ89scSsJX71qq3BvJ81v7C2LKxfJ6xZ2P6zJgb9Wxs30jyyScf33cCIM4YhA==
+  </data>
+ </layer>
+ <layer name="Items" width="40" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwUgBh9BoWoAzQLyaDH13SVR/B4pHwSgYBaNgFIyC4QIAJIQFkQ==
+  </data>
+ </layer>
+ <layer name="Foreground" width="40" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20MH6AAAACAtwEPoAAB
+  </data>
+ </layer>
+</map>
