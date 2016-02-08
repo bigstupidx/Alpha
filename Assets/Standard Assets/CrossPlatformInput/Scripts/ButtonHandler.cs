@@ -8,6 +8,11 @@ namespace UnityStandardAssets.CrossPlatformInput
 
         public string Name;
 
+		void Start()
+		{
+			CrossPlatformInputManager.SetAxisZero (Name);
+		}
+
         void OnEnable()
         {
 
