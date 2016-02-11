@@ -20,6 +20,8 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+		public bool canDoubleJump = true;
+
         private void Awake()
         {
             // Setting up references.
@@ -32,6 +34,7 @@ namespace UnityStandardAssets._2D
 		public void Start(){
 
 			m_Rigidbody2D.velocity.Set (0, 0);
+
 		}
 
         private void FixedUpdate()
@@ -68,6 +71,9 @@ namespace UnityStandardAssets._2D
             // Set whether or not the character is crouching in the animator
             m_Anim.SetBool("Crouch", crouch);
 
+			if (m_Grounded)
+				canDoubleJump = true;
+
             //only control the player if grounded or airControl is turned on
             if (m_Grounded || m_AirControl)
             {
@@ -94,13 +100,28 @@ namespace UnityStandardAssets._2D
                 }
             }
             // If the player should jump...
-            if (m_Grounded && jump && m_Anim.GetBool("Ground"))
-            {
-                // Add a vertical force to the player.
-                m_Grounded = false;
-                m_Anim.SetBool("Ground", false);
-                m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-            }
+			if (m_Grounded && jump && m_Anim.GetBool ("Ground")) {
+				// Add a vertical force to the player.
+				m_Grounded = false;
+				m_Anim.SetBool ("Ground", false);
+				m_Rigidbody2D.AddForce (new Vector2 (0f, m_JumpForce));
+			} else {
+
+				if (canDoubleJump && jump) {
+
+					canDoubleJump = false;
+					m_Grounded = false;
+					m_Anim.SetBool ("Ground", false);							
+
+					m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 0);
+
+					m_Rigidbody2D.AddForce (new Vector2 (0f, m_JumpForce));
+					
+				}
+
+
+			}
+
         }
 
 

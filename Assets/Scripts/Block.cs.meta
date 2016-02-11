@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 7ff03e96b8d18f8428cce39058c68831
-timeCreated: 1453607883
+timeCreated: 1454984814
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerEffect: {fileID: 139890, guid: abfef976c1d60c64cb92e372bac825ca, type: 2}
+  - enemyEffect: {fileID: 139890, guid: edd7eb969322a3244a814bab4d88b89f, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

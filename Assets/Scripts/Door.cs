@@ -30,18 +30,20 @@ public class Door : MonoBehaviour {
 
 			Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity) as GameObject, effectLength);
 
-			GameObject.Find ("Main Camera").GetComponent<Fading> ().beginFade (1);
-
 			StartCoroutine (Wait ());
 		}
 	}
 
 	IEnumerator Wait() {
 		
-		int fadeTime = 1;
-
+		int fadeTime = 2;
+		GameObject.Find ("Main Camera").GetComponent<Fading> ().beginFade (1);
 		yield return new WaitForSeconds (fadeTime);
+
+
 		SceneManager.LoadScene (1);
+
+
 
 	}
 }

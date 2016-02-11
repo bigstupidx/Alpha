@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Block : MonoBehaviour {
 
@@ -7,7 +8,12 @@ public class Block : MonoBehaviour {
 	Rigidbody2D myBody;
 	public int effectLength = 2;
 
-	public GameObject deathEffect;
+	public bool kill;
+	public Vector2 move;
+
+
+	public GameObject playerEffect;
+	public GameObject enemyEffect;
 
 	public int height;
 
@@ -37,13 +43,27 @@ public class Block : MonoBehaviour {
 
 		if (coll.gameObject.tag == "Player") {
 
-			Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity) as GameObject, effectLength);
+			coll.gameObject.SetActive (false);
 
-			Destroy (gameObject);
+			GameObject.Find ("Main Camera").GetComponent<Fading> ().beginFade (1);
+
+			StartCoroutine (Wait ());
+
+			Destroy(Instantiate(enemyEffect, transform.position, Quaternion.identity) as GameObject, effectLength);
+
+			coll.rigidbody.AddForce (move);
+
+			Destroy(Instantiate(playerEffect, transform.position, Quaternion.identity) as GameObject, effectLength);
 		}
-
-
-
 	}
 
+	IEnumerator Wait() {
+
+		int fadeTime = 1;
+
+		yield return new WaitForSeconds (fadeTime);
+
+		SceneManager.LoadScene (2);
+
+	}
 }

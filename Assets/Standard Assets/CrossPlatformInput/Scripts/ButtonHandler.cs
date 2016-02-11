@@ -10,7 +10,11 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 		void Start()
 		{
+			#if UNITY_IOS || UNITY_ANDROID
+
 			CrossPlatformInputManager.SetAxisZero (Name);
+
+			#endif
 		}
 
         void OnEnable()
@@ -53,3 +57,4 @@ namespace UnityStandardAssets.CrossPlatformInput
         }
     }
 }
+
