@@ -12,11 +12,7 @@ public class backAndForth: MonoBehaviour {
 	Transform myTrans;
 
 	public bool kill = false;
-	public Vector2 move;
-
-
 	public GameObject enemyEffect;
-	public GameObject playerEffect;
 
 	public int effectLength = 2;
 
@@ -42,23 +38,15 @@ public class backAndForth: MonoBehaviour {
 
 		if (coll.gameObject.tag == "Player") {
 
-			Destroy (Instantiate (enemyEffect, transform.position, Quaternion.identity) as GameObject, effectLength);
+			Destroy (Instantiate (enemyEffect, transform.position, Quaternion.identity) as GameObject, 2);
 
 			if (kill) {
 
-				coll.gameObject.SetActive (false);
+				coll.gameObject.GetComponent<HealthManager> ().Die ();
 
-				GameObject.Find ("Main Camera").GetComponent<Fading> ().beginFade (1);
-
-				StartCoroutine (Wait ());
-
-				Destroy (Instantiate (playerEffect, transform.position, Quaternion.identity) as GameObject, effectLength);
-
-				gameObject.GetComponent<Renderer> ().enabled = false;
+				Destroy (gameObject);
 
 			} else {
-
-				coll.gameObject.GetComponent<Rigidbody2D> ().AddForce (move);
 
 				Destroy (gameObject);
 			}
@@ -77,15 +65,5 @@ public class backAndForth: MonoBehaviour {
 			yield return new WaitForSeconds (flipTime);
 
 		}
-	}
-
-	IEnumerator Wait() {
-
-		int fadeTime = 1;
-
-		yield return new WaitForSeconds (fadeTime);
-
-		SceneManager.LoadScene (2);
-
 	}
 }

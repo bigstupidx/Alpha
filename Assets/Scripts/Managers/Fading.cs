@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Fading : MonoBehaviour {
 
@@ -29,8 +30,22 @@ public class Fading : MonoBehaviour {
 	}
 	
 	// OnLevelWasLoaded is called when a level is loaded.  Takes loaded level index as a parameter.
-	void OnLevelWasLoaded() {
-		
+	void OnLevelWasLoaded() {		
 		beginFade(-1);
-	}	
+	}
+
+	public void loadLevel(int levelIndex){
+		
+		StartCoroutine(Wait(levelIndex));
+
+	}
+
+	IEnumerator Wait(int levelIndex) {
+		
+		yield return new WaitForSeconds (1);
+
+		SceneManager.LoadScene (levelIndex);
+
+	}
+
 }

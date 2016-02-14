@@ -51,7 +51,7 @@ namespace UnityStandardAssets._2D
 
 				newPos.x = Mathf.Clamp(newPos.x, leftBound, rightBound);
 
-				newPos.y = Mathf.Clamp(newPos.y, bottomBound, 1000);
+				newPos.y = Mathf.Clamp(newPos.y, bottomBound, Mathf.Infinity);
 
 				transform.position = newPos;
 

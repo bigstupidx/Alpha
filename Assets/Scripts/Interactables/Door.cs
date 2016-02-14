@@ -41,7 +41,7 @@ public class Door : MonoBehaviour {
 		yield return new WaitForSeconds (fadeTime);
 
 
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (2);
 
 
 

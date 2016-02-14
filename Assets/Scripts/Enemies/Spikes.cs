@@ -39,7 +39,7 @@ public class Spikes : MonoBehaviour {
 
 		yield return new WaitForSeconds (fadeTime);
 
-		SceneManager.LoadScene (2);
+		SceneManager.LoadScene (3);
 
 	}
 }

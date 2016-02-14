@@ -44,8 +44,11 @@ public class UIFunctions : MonoBehaviour {
 
 		yield return new WaitForSeconds (fadeTime);
 		SceneManager.LoadScene (LevelIndex);
+	}
 
+	public void NextLevel() {
 
+		SceneManager.LoadScene (PlayerPrefs.GetInt ("LevelKey") + 1);
 
 	}
 

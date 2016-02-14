@@ -149,7 +149,7 @@
  </layer>
  <layer name="Ground" width="40" height="25">
   <data encoding="base64" compression="zlib">
-   eJztzjEKgDAQRFFJlyNYCnaeJKWH9J5auCAhYd0Mjs0M/CoseWn6f2nwjTX5sMmHTT5s8mGTD5t82L7wzVf50VG1BfJ89scSsJX71qq3BvJ81v7C2LKxfJ6xZ2P6zJgb9Wxs30jyyScf33cCIM4YhA==
+   eJxjYBgFo2AUjIJRMApGwSgYGUASiDmR8FI0rE0CrsZjTyKSHYokuM0TiJmQMDpQIQETAjA7AolwIza30ct9hNyIy230dB/MjZxYMC630dt95OBR9426b9R99HcfAHqoGPw=
   </data>
  </layer>
  <layer name="Items" width="40" height="25">

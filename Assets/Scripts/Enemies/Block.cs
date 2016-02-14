@@ -63,7 +63,7 @@ public class Block : MonoBehaviour {
 
 		yield return new WaitForSeconds (fadeTime);
 
-		SceneManager.LoadScene (2);
+		SceneManager.LoadScene (3);
 
 	}
 }
