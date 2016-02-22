@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 		void OnCollisionEnter2D(Collision2D coll){
 
 			if (coll.gameObject.tag == "Player") {
-			SceneManager.LoadScene (3);
+			SceneManager.LoadScene ("Death");
 		}
     }
 }

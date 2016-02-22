@@ -50,6 +50,32 @@ public class Player : MonoBehaviour {
 
 		Vector2 input = new Vector2 (CrossPlatformInputManager.GetAxisRaw ("Horizontal"), CrossPlatformInputManager.GetAxisRaw ("Vertical"));
 
+		if (controller.collisions.climbingSlope) {
+			m_Anim.SetBool ("Climbing", true);
+		} else {
+			m_Anim.SetBool ("Climbing", false);
+		}
+			
+
+		if (controller.collisions.descendingSlope) {
+			m_Anim.SetBool ("Descending", true);
+		} else {
+			m_Anim.SetBool ("Descending", false);
+		}
+
+		if (controller.collisions.climbingSlope && !m_Anim.GetBool("Walking")) {
+			m_Anim.SetBool ("climbIdle", true);
+		} else {
+			m_Anim.SetBool ("climbIdle", false);
+		}
+
+
+		if (controller.collisions.descendingSlope && !m_Anim.GetBool("Walking")) {
+			m_Anim.SetBool ("descendIdle", true);
+		} else {
+			m_Anim.SetBool ("descendIdle", false);
+		}
+
 			// If the input is moving the player right and the player is facing left...
 			if (input.x > 0 && !m_FacingRight) {
 				// ... flip the player.
@@ -138,5 +164,15 @@ public class Player : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+
+		if (controller.collisions.climbingSlope) {
+			controller.collisions.descendingSlope = true;
+			m_Anim.SetBool ("Descending", true);
+			m_Anim.SetBool ("Climbing", false);
+		} else if (controller.collisions.descendingSlope) {
+			controller.collisions.climbingSlope = true;
+			m_Anim.SetBool ("Climbing", true);
+			m_Anim.SetBool ("Descending", false);
+		}
 	}
 }

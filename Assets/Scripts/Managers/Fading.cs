@@ -40,6 +40,12 @@ public class Fading : MonoBehaviour {
 
 	}
 
+	public void loadDeath(){
+
+		StartCoroutine(Die());
+
+	}
+
 	IEnumerator Wait(int levelIndex) {
 		
 		yield return new WaitForSeconds (1);
@@ -48,4 +54,11 @@ public class Fading : MonoBehaviour {
 
 	}
 
+	IEnumerator Die() {
+
+		yield return new WaitForSeconds (1);
+
+		SceneManager.LoadScene ("Death");
+
+	}
 }

@@ -16,14 +16,17 @@ public class UIFunctions : MonoBehaviour {
 	
 	}
 
-	public void LoadLevel(int LevelIndex){
+	public void LoadLevel(string LevelName){
 
 
 		GameObject.Find ("Main Camera").GetComponent<Fading> ().beginFade (1);
 
-		StartCoroutine (Wait (LevelIndex));
+		StartCoroutine (Wait (LevelName));
+
 
 	}
+
+
 
 	public void Restart(){
 
@@ -35,7 +38,7 @@ public class UIFunctions : MonoBehaviour {
 
 	}
 
-	IEnumerator Wait(int LevelIndex) {
+	IEnumerator Wait(string LevelName) {
 
 		Time.timeScale = 1;
 
@@ -43,7 +46,7 @@ public class UIFunctions : MonoBehaviour {
 		int fadeTime = 1;
 
 		yield return new WaitForSeconds (fadeTime);
-		SceneManager.LoadScene (LevelIndex);
+		SceneManager.LoadScene (LevelName);
 	}
 
 	public void NextLevel() {

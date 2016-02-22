@@ -79,9 +79,23 @@
     </object>
    </objectgroup>
   </tile>
+  <tile id="88">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polyline points="0,0 0,128 96,96 128,32 128,0 0,0"/>
+    </object>
+   </objectgroup>
+  </tile>
   <tile id="93">
    <objectgroup draworder="index">
     <object id="0" x="0" y="0" width="128" height="128"/>
+   </objectgroup>
+  </tile>
+  <tile id="96">
+   <objectgroup draworder="index">
+    <object id="0" x="0" y="0">
+     <polyline points="0,0 0,32 32,96 128,128 128,0 0,0"/>
+    </object>
    </objectgroup>
   </tile>
   <tile id="104">
@@ -149,7 +163,7 @@
  </layer>
  <layer name="Ground" width="40" height="25">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApGwSgYGUASiDmR8FI0rE0CrsZjTyKSHYokuM0TiJmQMDpQIQETAjA7AolwIza30ct9hNyIy230dB/MjZxYMC630dt95OBR9426b9R99HcfAHqoGPw=
+   eJxjYBgFo2AUjIJRMApGwSgYGaAQiDmR8FI0rE0CrsZjTyKSHZFEuCsRSR0TEkYHKiRgagBkd8HAYHIfNjBQ7kOOc3zxPhp+o+4bdd+o+/ABAOnJGD4=
   </data>
  </layer>
  <layer name="Items" width="40" height="25">

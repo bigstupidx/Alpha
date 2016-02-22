@@ -19,21 +19,12 @@ public class HealthManager : MonoBehaviour {
 	public void Die(){
 
 		GameObject.Find ("Main Camera").GetComponent<Fading> ().beginFade (1);
-		GameObject.Find ("Main Camera").GetComponent<Fading> ().loadLevel (3);
+
+		GameObject.Find ("Main Camera").GetComponent<Fading> ().loadDeath ();
 
 		Destroy (Instantiate (playerEffect, transform.position, Quaternion.identity) as GameObject, 2);
 
 		gameObject.SetActive (false);
-
-	}
-
-	IEnumerator Wait() {
-
-		int fadeTime = 1;
-
-		yield return new WaitForSeconds (fadeTime);
-
-		SceneManager.LoadScene (3);
 
 	}
 }
