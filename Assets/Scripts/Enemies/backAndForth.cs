@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+namespace UnityStandardAssets._2D {
+
 public class backAndForth: MonoBehaviour {
 
 	public float speed = 1;
@@ -56,14 +58,14 @@ public class backAndForth: MonoBehaviour {
 
 	IEnumerator Flip(){
 
-		while(true){
+			while (true) {
 
-			Vector3 currRot = myTrans.eulerAngles;
-			currRot.y += 180;
-			myTrans.eulerAngles = currRot;
+				Vector3 currRot = myTrans.eulerAngles;
+				currRot.y += 180;
+				myTrans.eulerAngles = currRot;
 
-			yield return new WaitForSeconds (flipTime);
-
+				yield return new WaitForSeconds (flipTime);
+			}
 		}
 	}
 }

@@ -21,7 +21,9 @@ namespace UnityStandardAssets.Utility
 		private float heightDamping;
 
 		// Use this for initialization
-		void Start() { }
+		void Start() {
+			target = GameObject.FindGameObjectWithTag ("Player").transform;		
+		}
 
 		// Update is called once per frame
 		void LateUpdate()

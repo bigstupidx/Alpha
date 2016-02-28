@@ -6,6 +6,8 @@ public class Coin : MonoBehaviour {
 	public int effectLength = 2;
 	public GameObject deathEffect;
 
+	public int amount = 10;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -23,6 +25,8 @@ public class Coin : MonoBehaviour {
 			Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity) as GameObject, effectLength);
 
 			Destroy (gameObject);
+
+			coll.gameObject.GetComponent<MoneyManager>().AddMoney(amount);
 
 		}
 

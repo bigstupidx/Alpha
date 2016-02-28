@@ -135,5 +135,13 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+
+		public void powerUp(int powerUpForce){
+			m_JumpForce += powerUpForce;
+		}
+
+		public void powerDown(int powerUpForce){
+			m_JumpForce -= powerUpForce;
+		}
     }
 }

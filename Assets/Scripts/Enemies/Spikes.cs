@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+namespace UnityStandardAssets._2D {
+	
 public class Spikes : MonoBehaviour {
 	
 	public GameObject deathEffect;
@@ -19,10 +21,10 @@ public class Spikes : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll){
 
-		if (coll.gameObject.tag == "Player") {					
+			if (coll.gameObject.tag == "Player") {					
 			
 				coll.gameObject.GetComponent<HealthManager> ().Die ();					
-
+			}
 		}
 
 	}

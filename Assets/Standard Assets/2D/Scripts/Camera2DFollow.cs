@@ -1,65 +1,52 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
 namespace UnityStandardAssets._2D
 {
     public class Camera2DFollow : MonoBehaviour
     {
-        public Transform target;
-        public float damping = 1;
-        public float lookAheadFactor = 3;
-        public float lookAheadReturnSpeed = 0.5f;
-        public float lookAheadMoveThreshold = 0.1f;
 
-        private float m_OffsetZ;
-        private Vector3 m_LastTargetPosition;
-        private Vector3 m_CurrentVelocity;
-        private Vector3 m_LookAheadPos;
+		public bool go = false;
 
-		public float leftBound;
-		public float rightBound;
-		public float bottomBound;
+		private Vector2 velocity;
 
-        // Use this for initialization
-        private void Start()
-        {
-            m_LastTargetPosition = target.position;
-            m_OffsetZ = (transform.position - target.position).z;
-            transform.parent = null;
-        }
+		public float smoothTimeY;
+		public float smoothTimeX;
 
+		public GameObject player;
 
-        // Update is called once per frame
-        private void Update()
-        {
+     
+		void Start() {
+			
+			StartCoroutine(Wait ());
+		}
 
-			if (transform.position.y >= -5) {
+		void Update(){
+			
+		}
 
-				// only update lookahead pos if accelerating or changed direction
-				float xMoveDelta = (target.position - m_LastTargetPosition).x;
+		void FixedUpdate(){
 
-				bool updateLookAheadTarget = Mathf.Abs (xMoveDelta) > lookAheadMoveThreshold;
+			if (go) {
 
-				if (updateLookAheadTarget) {
-					m_LookAheadPos = lookAheadFactor * Vector3.right * Mathf.Sign (xMoveDelta);
-				} else {
-					m_LookAheadPos = Vector3.MoveTowards (m_LookAheadPos, Vector3.zero, Time.deltaTime * lookAheadReturnSpeed);
-				}
+				float posX = Mathf.SmoothDamp (transform.position.x, player.transform.position.x, ref velocity.x, smoothTimeX);
+				float posY = Mathf.SmoothDamp (transform.position.y, player.transform.position.y, ref velocity.y, smoothTimeX);
 
-				Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward * m_OffsetZ;
-				Vector3 newPos = Vector3.SmoothDamp (transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
+				posX = Mathf.Clamp(posX, 0, Mathf.Infinity);
 
-				newPos.x = Mathf.Clamp(newPos.x, leftBound, rightBound);
-
-				newPos.y = Mathf.Clamp(newPos.y, bottomBound, Mathf.Infinity);
-
-				transform.position = newPos;
-
-				m_LastTargetPosition = target.position;
-
+				transform.position = new Vector3 (posX, posY, transform.position.z);
 
 
 			}
-        }
-    }
+
+		}
+
+		IEnumerator Wait(){
+
+			yield return new WaitForSeconds (1);
+
+			player = GameObject.FindGameObjectWithTag("Player");
+			go = true;
+		}
+	}
 }
